@@ -1,0 +1,20 @@
+﻿<!--<div id="result" class="row">--> <!--ng-controller="customerDetailsCtrl as vm">-->
+       <table class="table table-striped" ng-show="vm.courseList.length > 0">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Email</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in vm.courseList">
+                <td>{{item.name}}</td>
+                <td>{{item.course}}</td>
+                <td>{{item.email}}</td>
+                <td><a href="#customerDetails"><i class="fa fa-comment"></i> more details</a></td>
+            </tr>
+        </tbody>
+    </table>
+<!--</div>-->

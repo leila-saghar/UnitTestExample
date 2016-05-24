@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+	<meta charset="utf-8" />      
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="">
+</head>
+<body ng-controller="homeCtrl as m"> 
+    <!-- HEADER AND NAVBAR -->
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Angular Routing Example</a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+                    <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+                    <li><a href="#customers"><i class="fa fa-comment"></i> customerDetails</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>   
+    <div class="container">
+        <input type="button" id="mybtn" name="mybtn" class="btn btn-primary" ng-click="m.showResults()" value="show more details" />
+        <div  id="main" class="row">
+            <!--<div ng-view></div>-->
+            <div ui-view></div>
+        </div>            
+    </div>
+    
+    <!--bootstrap & JQuery-->  
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!--angular-->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <!--application-->
+    <script src="app/main/app.mdl.js"></script>
+    <script src="app/main/services/shared.Svc.js"></script>
+    <script src="app/main/controllers/home.Ctrl.js"></script>
+    <script src="app/main/controllers/customers.ctrl.js"></script>
+    <script src="app/main/controllers/details.Ctrl.js"></script>
+</body>
+</html>
